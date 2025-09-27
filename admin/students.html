@@ -272,7 +272,7 @@
             <div class="modal-dialog modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header bg-primary text-white">
-                        <h5 class="modal-title" id="viewingModalLabel"><i class="fas fa-eye"></i> Viewing User Details </h5>
+                        <h5 class="modal-title" id="viewingModalLabel"><i class="fas fa-eye"></i> Viewing Student Details </h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
@@ -282,7 +282,7 @@
                         <p><strong>Course:</strong> BS Computer Science </span></p>
                         <p><strong>Year Level:</strong> 3rd Year </span></p>
                         <p><strong>Contact:</strong> juan.delacruz@student.msu.edu </span></p>
-                        <p><strong>Status:</strong> Enrolled </span></p>
+                       <p><strong>Status:</strong> <span class="badge bg-success">Enrolled</span></p>
                         
                     </div>
                     <div class="modal-footer">
@@ -296,7 +296,7 @@
             <div class="modal-dialog modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header bg-primary text-white">
-                        <h5 class="modal-title" id="viewingModalLabel"><i class="fas fa-eye"></i> Viewing User Details </h5>
+                        <h5 class="modal-title" id="viewingModalLabel"><i class="fas fa-eye"></i> Viewing Student Details </h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
@@ -306,7 +306,7 @@
                         <p><strong>Course:</strong> BS Information Technology </span></p>
                         <p><strong>Year Level:</strong> 2nd Year </span></p>
                         <p><strong>Contact:</strong> maria.santos@student.msu.edu </span></p>
-                        <p><strong>Status:</strong> Enrolled </span></p>
+                        <p><strong>Status:</strong> <span class="badge bg-success">Enrolled</span></p>
                         
                     </div>
                     <div class="modal-footer">
@@ -320,7 +320,7 @@
             <div class="modal-dialog modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header bg-primary text-white">
-                        <h5 class="modal-title" id="viewingModalLabel"><i class="fas fa-eye"></i> Viewing User Details </h5>
+                        <h5 class="modal-title" id="viewingModalLabel"><i class="fas fa-eye"></i> Viewing Student Details </h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
@@ -330,7 +330,7 @@
                         <p><strong>Course:</strong> BS Computer Science </span></p>
                         <p><strong>Year Level:</strong> 4th Year </span></p>
                         <p><strong>Contact:</strong> pedro.reyes@student.msu.edu </span></p>
-                        <p><strong>Status:</strong> Pending </span></p>
+                       <p><strong>Status:</strong> <span class="badge bg-success">Pending</span></p>
                         
                     </div>
                     <div class="modal-footer">
@@ -344,7 +344,7 @@
             <div class="modal-dialog modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header bg-primary text-white">
-                        <h5 class="modal-title" id="viewingModalLabel"><i class="fas fa-eye"></i> Viewing User Details </h5>
+                        <h5 class="modal-title" id="viewingModalLabel"><i class="fas fa-eye"></i> Viewing Student Details </h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
@@ -354,8 +354,8 @@
                         <p><strong>Course:</strong> BS Information Technology </span></p>
                         <p><strong>Year Level:</strong> 1st Year </span></p>
                         <p><strong>Contact:</strong> ana.gonzalez@student.msu.edu </span></p>
-                        <p><strong>Status:</strong> Enrolled </span></p>
-                        
+                        <p><strong>Status:</strong> <span class="badge bg-success">Enrolled</span></p>  
+
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -368,8 +368,8 @@
         <div class="modal fade" id="editingStudents" tabindex="-1" aria-labelledby="editingModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog">
                 <div class="modal-content">
-                    <div class="modal-header bg-primary text-white">
-                        <h5 class="modal-title" id="studentModalLabel">Editing Students Details</h5>
+                    <div class="modal-header btn btn-primary text-white">
+                        <h5 class="modal-title" id="studentModalLabel">Editing Student Details</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
@@ -397,7 +397,8 @@
                             <div class="mb-3">
                                 <label class="form-label">Status</label>
                                 <select class="form-select" id="editStatus">
-                                    <option value="active">Active</option>
+                                    <option value="active">Enrolled</option>
+                                    <option value="active">Pending</option>
                                 </select>
                             </div>
                         </form>
