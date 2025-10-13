@@ -7,9 +7,22 @@
         <meta name="description" content="MSU Admin Dashboard" />
         <meta name="author" content="Marinduque State University" />
         <title>MarSU Admin Dashboard</title>
+        <title>jQuery UI Accordion - Default functionality</title>
+        <title>jQuery UI Autocomplete - Default functionality</title>
+        <title>jQuery UI Checkboxradio - Product Selector</title>
         <link href="../css/style.min.css" rel="stylesheet" />
         <link href="../css/styles.css" rel="stylesheet" />
         <link rel="stylesheet" href="../css/bootstrap-icons.css">
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.1/themes/base/jquery-ui.css">
+        <link rel="stylesheet" href="/resources/demos/style.css">
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.1/themes/base/jquery-ui.css">
+        <link rel="stylesheet" href="/resources/demos/style.css">
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.1/themes/base/jquery-ui.css">
+        <link rel="stylesheet" href="/resources/demos/style.css">
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.1/themes/base/jquery-ui.css">
+        <link rel="stylesheet" href="/resources/demos/style.css">
+        
+        
         <script src="../js/all.js" crossorigin="anonymous"></script>
         <style>
             :root {
@@ -50,6 +63,113 @@
                 box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15);
             }
         </style>
+
+        <style>
+            .shape {
+                margin-left: 4em;
+                margin-top: 2.5em;
+                height: 8em;
+                width: 8em;
+                box-shadow: 4px 4px 8px;
+                color: #ccc;
+                background-repeat: no-repeat;
+                background-size: 90%;
+                background-position: 50%;
+            }
+            .circle, .pill {
+                border-radius: 8em;
+            }
+                .pill, .rectangle {
+                width: 16em;
+            }
+                .square, .circle {
+                margin-left: 9em;
+            }
+                .border {
+                border: 2px solid #333333;
+            }
+            .toggles {
+                width: 200px;
+            }
+                .toggle-wrap, .shape {
+                display: inline-block;
+                vertical-align: top;
+            }
+                .controls {
+                background: #ccc;
+                padding: 1em;
+                display: inline-block;
+            }
+        </style>
+
+        <style>
+            .ui-progressbar {
+                position: relative;
+            }
+            .progress-label {
+                position: absolute;
+                left: 50%;
+                top: 4px;
+                font-weight: bold;
+                text-shadow: 1px 1px 0 #fff;
+            }
+        </style>
+
+        <style>
+            #red, #green, #blue {
+                float: left;
+                clear: left;
+                width: 300px;
+                margin: 15px;
+            }
+            #swatch {
+                width: 120px;
+                height: 100px;
+                margin-top: 18px;
+                margin-left: 350px;
+                background-image: none;
+            }
+            #red .ui-slider-range { background: #ef2929; }
+            #red .ui-slider-handle { border-color: #ef2929; }
+            #green .ui-slider-range { background: #8ae234; }
+            #green .ui-slider-handle { border-color: #8ae234; }
+            #blue .ui-slider-range { background: #729fcf; }
+            #blue .ui-slider-handle { border-color: #729fcf; }
+        </style>
+
+            <style>
+            fieldset {
+            border: 0;
+            }
+            label {
+            display: block;
+            margin: 30px 0 0 0;
+            }
+            .overflow {
+            height: 200px;
+            }
+        </style>
+
+        <style>
+            .photo {
+                width: 300px;
+                text-align: center;
+            }
+            .photo .ui-widget-header {
+                margin: 1em 0;
+            }
+            .map {
+                width: 350px;
+                height: 350px;
+            }
+            .ui-tooltip {
+                max-width: 350px;
+            }
+        </style>
+
+
+
+
     </head>
     <body class="sb-nav-fixed">
         <nav class="sb-topnav navbar navbar-expand navbar-dark">
@@ -125,7 +245,7 @@
                                 <div class="sb-nav-link-icon"><i class="fas fa-code"></i></div>
                                 JavaScript Playground
                             </a>
-                            <div class="sb-sidenav-menu-heading">BSIS STUDENTS</div>
+                             <div class="sb-sidenav-menu-heading">BSIS STUDENTS</div>
                             <a class="nav-link" href="#">
                                 <div class="sb-nav-link-icon"><i class="fas fa-user-graduate"></i></div>
                                 Student Portal
@@ -151,27 +271,313 @@
 
                         <button class="btn btn-success" onclick="showAlert();">Click Me to Alert</button>
                         <button class="btn btn-primary" onclick="showAlertYesNo();">Click Me to Alert Yes/No </button>
+                        
 
                         <div class="row">
-                            <div class="col-3">
+                            <div class="col-5"><br> 
                                 <form onsubmit="computeSum();">
-                                   <h1> THIS IS COMPUTATION OF 2 NUMBERS </h1><br>
+                                   <h3> THIS IS COMPUTATION OF 2 NUMBERS </h3><br>
                                    <input type="text" name="" id="number1" class="form-control" placeholder="Enter first number">
                                    <br>
                                    <input type="text" name="" id="number2" class="form-control" placeholder="Enter second number">
                                    <br>
                                    <button type="submit" class="btn btn-primary">Submit</button> 
                                 </form>
-
-
-
                             </div>
                         </div>
 
-                       
 
+                        <h3 class="mt-4">Accordion </h3>
+                    
+                        <div id="accordion">
+                            <h3>Section 1</h3>
+                            <div>
+                                <p>
+                                Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer
+                                ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit
+                                amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut
+                                odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.
+                                </p>
+                            </div>
+                            <h3>Section 2</h3>
+                            <div>
+                                <p>
+                                Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet
+                                purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor
+                                velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In
+                                suscipit faucibus urna.
+                                </p>
+                            </div>
+                            <h3>Section 3</h3>
+                            <div>
+                                <p>
+                                Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis.
+                                Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero
+                                ac tellus pellentesque semper. Sed ac felis. Sed commodo, magna quis
+                                lacinia ornare, quam ante aliquam nisi, eu iaculis leo purus venenatis dui.
+                                </p>
+                                <ul>
+                                <li>List item one</li>
+                                <li>List item two</li>
+                                <li>List item three</li>
+                                </ul>
+                            </div>
+                            <h3>Section 4</h3>
+                            <div>
+                                <p>
+                                Cras dictum. Pellentesque habitant morbi tristique senectus et netus
+                                et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in
+                                faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia
+                                mauris vel est.
+                                </p>
+                                <p>
+                                Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus.
+                                Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
+                                inceptos himenaeos.
+                                </p>
+                            </div>
+                        </div>
 
-                    </div>    
+                        <h3 class="mt-4">Autocomplete</h3>
+                        <div class="ui-widget">
+                            <label for="tags">Tags: </label>
+                            <input id="tags">
+                        </div><br>
+
+                        <h3 class="mt-4">Checkboxradio </h3>
+                        <div class="widget">
+                            <h4>Checkbox and radio button widgets</h4>
+                        
+                            <h5>Radio Group</h5>
+                            <fieldset>
+                                <h6>Select a Location: </h6>
+                                <label for="radio-1">New York</label>
+                                <input type="radio" name="radio-1" id="radio-1">
+                                <label for="radio-2">Paris</label>
+                                <input type="radio" name="radio-1" id="radio-2">
+                                <label for="radio-3">London</label>
+                                <input type="radio" name="radio-1" id="radio-3">
+                            </fieldset>
+                        
+                            <h5>Checkbox</h5>
+                            <fieldset>
+                                <h6>Hotel Ratings: </h6>
+                                <label for="checkbox-1">2 Star</label>
+                                <input type="checkbox" name="checkbox-1" id="checkbox-1">
+                                <label for="checkbox-2">3 Star</label>
+                                <input type="checkbox" name="checkbox-2" id="checkbox-2">
+                                <label for="checkbox-3">4 Star</label>
+                                <input type="checkbox" name="checkbox-3" id="checkbox-3">
+                                <label for="checkbox-4">5 Star</label>
+                                <input type="checkbox" name="checkbox-4" id="checkbox-4">
+                            </fieldset>
+                        
+                            <h5>Checkbox nested in label</h5>
+                            <fieldset>
+                                <h6>Bed Type: </h6>
+                                <label for="checkbox-nested-1">2 Double
+                                <input type="checkbox" name="checkbox-nested-1" id="checkbox-nested-1">
+                                </label>
+                                <label for="checkbox-nested-2">2 Queen
+                                <input type="checkbox" name="checkbox-nested-2" id="checkbox-nested-2">
+                                </label>
+                                <label for="checkbox-nested-3">1 Queen
+                                <input type="checkbox" name="checkbox-nested-3" id="checkbox-nested-3">
+                                </label>
+                                <label for="checkbox-nested-4">1 King
+                                <input type="checkbox" name="checkbox-nested-4" id="checkbox-nested-4">
+                                </label>
+                            </fieldset>
+                        </div><br> 
+                        
+                        <h3 class="mt-4">Datepicker </h3>
+                        <div>
+                            <p>Date: <input type="text" id="datepicker"></p>  
+                        </div>
+                        <br>
+
+                        <div>
+                            <div id="dialog" title="Basic dialog">
+                                <p>This is the default dialog which is useful for displaying information. The dialog window can be moved, resized and closed with the 'x' icon.</p>
+                            </div>
+                        </div>
+
+                        <h3 class="mt-4">Menu </h3>
+                        <div>
+                             <ul id="menu">
+                                <li class="ui-widget-header"><div>Category 1</div></li>
+                                <li><div>Option 1</div></li>
+                                <li><div>Option 2</div></li>
+                                <li><div>Option 3</div></li>
+                                <li class="ui-widget-header"><div>Category 2</div></li>
+                                <li><div>Option 4</div></li>
+                                <li><div>Option 5</div></li>
+                                <li><div>Option 6</div></li>
+                            </ul>
+                        </div><br>
+
+                        <h3 class="mt-4">Progressbar </h3>
+                        <div>
+                            <div id="progressbar"><div class="progress-label">Loading...</div>
+                        </div><br>  
+                    
+                        <h3 class="mt-4">Selectmenu </h3>
+                        <div class="demo">
+                            <form action="#">
+                            
+                            <fieldset>
+                                <label for="speed">Select a speed</label>
+                                <select name="speed" id="speed">
+                                <option>Slower</option>
+                                <option>Slow</option>
+                                <option selected="selected">Medium</option>
+                                <option>Fast</option>
+                                <option>Faster</option>
+                                </select>
+                            
+                                <label for="files">Select a file</label>
+                                <select name="files" id="files">
+                                <optgroup label="Scripts">
+                                    <option value="jquery">jQuery.js</option>
+                                    <option value="jqueryui">ui.jQuery.js</option>
+                                </optgroup>
+                                <optgroup label="Other files">
+                                    <option value="somefile">Some unknown file</option>
+                                    <option value="someotherfile">Some other file with a very long option text</option>
+                                </optgroup>
+                                </select>
+                            
+                                <label for="number">Select a number</label>
+                                <select name="number" id="number">
+                                <option>1</option>
+                                <option selected="selected">2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                                <option>6</option>
+                                <option>7</option>
+                                <option>8</option>
+                                <option>9</option>
+                                <option>10</option>
+                                <option>11</option>
+                                <option>12</option>
+                                <option>13</option>
+                                <option>14</option>
+                                <option>15</option>
+                                <option>16</option>
+                                <option>17</option>
+                                <option>18</option>
+                                <option>19</option>
+                                </select>
+                            
+                                <label for="salutation">Select a title</label>
+                                <select name="salutation" id="salutation">
+                                <option disabled="" selected="">Please pick one</option>
+                                <option>Mr.</option>
+                                <option>Mrs.</option>
+                                <option>Dr.</option>
+                                <option>Prof.</option>
+                                <option>Other</option>
+                                </select>
+                            </fieldset>
+                            
+                            </form>
+
+                        </div>
+
+                    
+                        <h3 class="mt-4">Slider </h3>
+                        <div class="row">
+                            <div class="col-10">
+                        </head>
+                        <body class="ui-widget-content" style="border:0;">
+                            
+                        <p class="ui-state-default ui-corner-all ui-helper-clearfix" style="padding:4px;">
+                            <span class="ui-icon ui-icon-pencil" style="float:left; margin:-2px 5px 0 0;"></span>
+                            Simple Colorpicker
+                        </p>
+                            
+                        <div id="red"></div>
+                        <div id="green"></div>
+                        <div id="blue"></div>
+                            
+                        <div id="swatch" class="ui-widget-content ui-corner-all"></div>
+                        </body><br>
+
+                        </div>
+                        <h3 class="">Spinner</h3>
+                        </head>
+                            <body>
+                            
+                            <p>
+                                <label for="spinner">Time spinner:</label>
+                                <input id="spinner" name="spinner" value="08:30 PM">
+                            </p>
+                            <p>
+                                <label for="culture">Select a culture to use for formatting:</label>
+                                <select id="culture">
+                                    <option value="en-EN" selected="selected">English</option>
+                                    <option value="de-DE">German</option>
+                                </select>
+                            </p>
+                        </body>
+
+                        </head>
+                        <h3 class="mt-4">Tabs </h3>
+                        <body>
+                            
+                            <div id="tabs">
+                              <ul>
+                                <li><a href="#tabs-1">Nunc tincidunt</a></li>
+                                <li><a href="#tabs-2">Proin dolor</a></li>
+                                <li><a href="#tabs-3">Aenean lacinia</a></li>
+                            </ul>
+                            <div id="tabs-1">
+                                <p>Proin elit arcu, rutrum commodo, vehicula tempus, commodo a, risus. Curabitur nec arcu. Donec sollicitudin mi sit amet mauris. Nam elementum quam ullamcorper ante. Etiam aliquet massa et lorem. Mauris dapibus lacus auctor risus. Aenean tempor ullamcorper leo. Vivamus sed magna quis ligula eleifend adipiscing. Duis orci. Aliquam sodales tortor vitae ipsum. Aliquam nulla. Duis aliquam molestie erat. Ut et mauris vel pede varius sollicitudin. Sed ut dolor nec orci tincidunt interdum. Phasellus ipsum. Nunc tristique tempus lectus.</p>
+                            </div>
+                            <div id="tabs-2">
+                                <p>Morbi tincidunt, dui sit amet facilisis feugiat, odio metus gravida ante, ut pharetra massa metus id nunc. Duis scelerisque molestie turpis. Sed fringilla, massa eget luctus malesuada, metus eros molestie lectus, ut tempus eros massa ut dolor. Aenean aliquet fringilla sem. Suspendisse sed ligula in ligula suscipit aliquam. Praesent in eros vestibulum mi adipiscing adipiscing. Morbi facilisis. Curabitur ornare consequat nunc. Aenean vel metus. Ut posuere viverra nulla. Aliquam erat volutpat. Pellentesque convallis. Maecenas feugiat, tellus pellentesque pretium posuere, felis lorem euismod felis, eu ornare leo nisi vel felis. Mauris consectetur tortor et purus.</p>
+                            </div>
+                            <div id="tabs-3">
+                                <p>Mauris eleifend est et turpis. Duis id erat. Suspendisse potenti. Aliquam vulputate, pede vel vehicula accumsan, mi neque rutrum erat, eu congue orci lorem eget lorem. Vestibulum non ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce sodales. Quisque eu urna vel enim commodo pellentesque. Praesent eu risus hendrerit ligula tempus pretium. Curabitur lorem enim, pretium nec, feugiat nec, luctus a, lacus.</p>
+                                <p>Duis cursus. Maecenas ligula eros, blandit nec, pharetra at, semper at, magna. Nullam ac lacus. Nulla facilisi. Praesent viverra justo vitae neque. Praesent blandit adipiscing velit. Suspendisse potenti. Donec mattis, pede vel pharetra blandit, magna ligula faucibus eros, id euismod lacus dolor eget odio. Nam scelerisque. Donec non libero sed nulla mattis commodo. Ut sagittis. Donec nisi lectus, feugiat porttitor, tempor ac, tempor vitae, pede. Aenean vehicula velit eu tellus interdum rutrum. Maecenas commodo. Pellentesque nec elit. Fusce in lacus. Vivamus a libero vitae lectus hendrerit hendrerit.</p>
+                            </div>
+                            </div>
+                        </body>    
+
+                        </head>
+                        <h3 class="mt-4">Tooltip </h3>
+                            <body>
+                            
+                            <div class="ui-widget photo">
+                            <div class="ui-widget-header ui-corner-all">
+                                <h2>St. Stephen's Cathedral</h2>
+                                <h3><a href="https://maps.google.com/maps?q=vienna,+austria&amp;z=11" data-geo="">Vienna, Austria</a></h3>
+                            </div>
+                            <a href="https://en.wikipedia.org/wiki/File:Wien_Stefansdom_DSC02656.JPG">
+                                <img src="images/st-stephens.jpg" alt="St. Stephen's Cathedral" class="ui-corner-all">
+                            </a>
+                            </div>
+                            
+                            <div class="ui-widget photo">
+                            <div class="ui-widget-header ui-corner-all">
+                                <h2>Tower Bridge</h2>
+                                <h3><a href="https://maps.google.com/maps?q=london,+england&amp;z=11" data-geo="">London, England</a></h3>
+                            </div>
+                            <a href="https://en.wikipedia.org/wiki/File:Tower_bridge_London_Twilight_-_November_2006.jpg">
+                                <img src="images/tower-bridge.jpg" alt="Tower Bridge" class="ui-corner-all">
+                            </a>
+                            </div>
+                            
+                            <p>All images are part of <a href="https://commons.wikimedia.org/wiki/Main_Page">Wikimedia Commons</a>
+                            and are licensed under <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.en" title="Creative Commons Attribution-ShareAlike 3.0">CC BY-SA 3.0</a> by the copyright holder.</p>
+                            
+                        </body></html>
+                                
+                    </div>
+
+   
+                </div>    
                 </main>
                 <!-- END OF THE CONTENT PAGE -->
                 <footer class="py-4 bg-light mt-auto">
@@ -183,7 +589,7 @@
                                 &middot;
                                 <a href="#">Terms &amp; Conditions</a>
                             </div>
-                        </div>
+                        </div> 
                     </div>
                 </footer>
             </div>
@@ -212,11 +618,231 @@
         <script src="../js/simple-datatables.min.js" crossorigin="anonymous"></script>
         <script src="../js/datatables-simple-demo.js"></script>
         <script src="../js/custom.js"></script>
+        <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+        <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
+        <script src="/resources/demos/external/globalize/globalize.js"></script>
+        <script src="/resources/demos/external/globalize/globalize.culture.de-DE.js"></script>
+        <script src="/resources/demos/external/jquery-mousewheel/jquery.mousewheel.js"></script>
+        <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+        <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
+        
+
 
         <script>
             function showAlert() {
                 alert("Hello! This is a JavaScript Alert. ");
             }
         </script>
+
+        <script>
+            $( function() {
+                $( "#accordion" ).accordion();
+            } );
+        </script>
+
+        <script>
+            $( function() {
+                var availableTags = [
+                "ActionScript",
+                "AppleScript",
+                "Asp",
+                "BASIC",
+                "C",
+                "C++",
+                "Clojure",
+                "COBOL",
+                "ColdFusion",
+                "Erlang",
+                "Fortran",
+                "Groovy",
+                "Haskell",
+                "Java",
+                "JavaScript",
+                "Lisp",
+                "Perl",
+                "PHP",
+                "Python",
+                "Ruby",
+                "Scala",
+                "Scheme"
+                ];
+                $( "#tags" ).autocomplete({
+                source: availableTags
+                });
+            } );
+        </script>
+
+        <script>
+            $( function() {
+                $( "input" ).checkboxradio();
+            } );
+        </script>
+        
+
+        <script>
+            $( function() {
+                $( "#datepicker" ).datepicker();
+            } );
+        </script>
+
+        <script>
+            $( function() {
+                $( "#datepicker" ).datepicker({
+                showOn: "button",
+                buttonImage: "images/calendar.gif",
+                buttonImageOnly: true,
+                buttonText: "Select date"
+                });
+            } );
+        </script>
+
+        <script>
+            $( function() {
+                $( "#dialog" ).dialog();
+            } );
+        </script>
+
+        <script>
+            $( function() {
+                $( "#menu" ).menu({
+                items: "> :not(.ui-widget-header)"
+                });
+            } );
+        </script>
+
+        <script>
+            $( function() {
+                var progressbar = $( "#progressbar" ),
+                    progressLabel = $( ".progress-label" );
+            
+                progressbar.progressbar({
+                    value: false,
+                    change: function() {
+                        progressLabel.text( progressbar.progressbar( "value" ) + "%" );
+                    },
+                    complete: function() {
+                        progressLabel.text( "Complete!" );
+                    }
+                });
+            
+                function progress() {
+                    var val = progressbar.progressbar( "value" ) || 0;
+                
+                    progressbar.progressbar( "value", val + 2 );
+            
+                    if ( val < 99 ) {
+                        setTimeout( progress, 80 );
+                    }
+                }
+                
+                setTimeout( progress, 2000 );
+            } );
+        </script>
+
+        <script>
+            $( function() {
+                function hexFromRGB(r, g, b) {
+                    var hex = [
+                        r.toString( 16 ),
+                        g.toString( 16 ),
+                        b.toString( 16 )
+                    ];
+                    $.each( hex, function( nr, val ) {
+                        if ( val.length === 1 ) {
+                            hex[ nr ] = "0" + val;
+                        }
+                    });
+                    return hex.join( "" ).toUpperCase();
+                }
+                function refreshSwatch() {
+                    var red = $( "#red" ).slider( "value" ),
+                        green = $( "#green" ).slider( "value" ),
+                        blue = $( "#blue" ).slider( "value" ),
+                        hex = hexFromRGB( red, green, blue );
+                    $( "#swatch" ).css( "background-color", "#" + hex );
+                }
+                
+                $( "#red, #green, #blue" ).slider({
+                orientation: "horizontal",
+                range: "min",
+                max: 255,
+                value: 127,
+                slide: refreshSwatch,
+                change: refreshSwatch
+                });
+                $( "#red" ).slider( "value", 255 );
+                $( "#green" ).slider( "value", 140 );
+                $( "#blue" ).slider( "value", 60 );
+            } ); 
+        </script>
+
+        <script>
+            $( function() {
+                $.widget( "ui.timespinner", $.ui.spinner, {
+                options: {
+                    // seconds
+                    step: 60 * 1000,
+                    // hours
+                    page: 60
+                },
+            
+                _parse: function( value ) {
+                    if ( typeof value === "string" ) {
+                    // already a timestamp
+                    if ( Number( value ) == value ) {
+                        return Number( value );
+                    }
+                    return +Globalize.parseDate( value );
+                    }
+                    return value;
+                },
+            
+                _format: function( value ) {
+                    return Globalize.format( new Date(value), "t" );
+                }
+                });
+            
+                $( "#spinner" ).timespinner();
+            
+                $( "#culture" ).on( "change", function() {
+                var current = $( "#spinner" ).timespinner( "value" );
+                Globalize.culture( $(this).val() );
+                $( "#spinner" ).timespinner( "value", current );
+                });
+            } );
+        </script>
+
+        <script>
+            $( function() {
+                $( "#tabs" ).tabs();
+            } );
+        </script>
+
+        <script>
+            $( function() {
+                $( document ).tooltip({
+                items: "img, [data-geo], [title]",
+                content: function() {
+                    var element = $( this );
+                    if ( element.is( "[data-geo]" ) ) {
+                    var text = element.text();
+                    return "<img class='map' alt='" + text +
+                        "' src='https://maps.google.com/maps/api/staticmap?" +
+                        "zoom=11&size=350x350&maptype=terrain&sensor=false&center=" +
+                        text + "'>";
+                    }
+                    if ( element.is( "[title]" ) ) {
+                    return element.attr( "title" );
+                    }
+                    if ( element.is( "img" ) ) {
+                    return element.attr( "alt" );
+                    }
+                }
+                });
+            } );
+        </script>
+
+
+
     </body>
 </html>
